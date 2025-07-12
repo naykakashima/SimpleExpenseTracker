@@ -71,8 +71,10 @@ java src/Presentation/Menu.java
 
 ---
 
-## 📂 Sample persistence code
+## 💾 Sample Data
+The budgets.dat and expenses.dat files store serialized objects for persisting your budgets and expenses between runs.
 
-budgets.dat and expenses.dat contain sample data to test for persistence
+These files are automatically created after your first save and can be used to test persistence functionality.
+
 
 
