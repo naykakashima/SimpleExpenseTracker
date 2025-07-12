@@ -16,7 +16,4 @@ public class MenuHelper {
         System.out.println("Invalid option. Please try again.");
     }
 
-    public static void goodbye() {
-        System.out.println("Goodbye!");
-    }
 }
