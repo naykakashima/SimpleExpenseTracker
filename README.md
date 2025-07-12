@@ -68,3 +68,11 @@ javac src/**/*.java
 ```bash
 java src/Presentation/Menu.java
 ```
+
+---
+
+## 📂 Sample persistence code
+
+budgets.dat and expenses.dat contain sample data to test for persistence
+
+
