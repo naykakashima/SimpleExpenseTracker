@@ -2,9 +2,11 @@ package Presentation;
 
 import java.util.Scanner;
 
+import Application.ExpenseTracker;
 import Presentation.Helpers.MenuHelper;
 
 public class Menu {
+    private final ExpenseTracker expenseTracker = new ExpenseTracker();
 
     private static final Scanner scanner = new Scanner(System.in);
 
@@ -17,16 +19,16 @@ public class Menu {
 
             switch (input) {
                 case "1":
-                    addExpense();
+                    expenseTracker.viewExpense();
                     break;
                 case "2":
-                    viewExpenses();
+                    expenseTracker.addExpense();
                     break;
                 case "3":
-                    setBudget();
+                    expenseTracker.setBudget();
                     break;
                 case "4":
-                    viewReport();
+                    expenseTracker.viewReport();
                     break;
                 case "5":
                     saveAndExit();
@@ -40,25 +42,9 @@ public class Menu {
         scanner.close();
     }
 
-    private static void addExpense() {
-        System.out.println("");
-
+    public void saveAndExit() {
+        expenseTracker.saveData();
+        System.out.println("✅ Data saved to file. See you next time!");
     }
 
-    private static void viewExpenses() {
-        System.out.println("");
-    }
-
-    private static void setBudget() {
-        System.out.println("");
-    }
-
-    private static void viewReport() {
-        System.out.println("");
-    }
-
-    private static void saveAndExit() {
-        System.out.println("");
-        MenuHelper.goodbye();
-    }
 }

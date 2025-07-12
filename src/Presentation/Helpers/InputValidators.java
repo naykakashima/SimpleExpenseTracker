@@ -4,16 +4,22 @@ import java.util.Scanner;
 
 public class InputValidators
 {
-    public static int ValidateInputInt(){
+    public static double ValidateInputInt(String promptMessage){
         Scanner sc = new Scanner(System.in);
-        int result;
+        double result;
 
         while(true){
-            System.out.println("Enter an integer: ");
+            System.out.println(promptMessage);
             String userInput = sc.nextLine();
 
             if (isInt(userInput)){
                 result = Integer.parseInt(userInput);
+
+                if (result < 0){
+                    System.out.println("Please enter a positive integer.");
+                    continue;
+                }
+
                 return result;
             }
 
